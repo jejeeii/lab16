@@ -17,3 +17,22 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &w,int &x, int &y,int &z){
+   int n[] = {w,x,y,z};
+   int m[4];
+   int p[4] = {1,1,1,1};
+   int i = 0;
+   while(i < 4){
+      int r = rand()%4;
+         if(p[r] == 1){
+           m[i] = n[r];
+           p[r] = 0;
+           i++;
+        }
+   }
+   w = m[0];
+   x = m[1];
+   y = m[2];
+   z = m[3];
+} 
